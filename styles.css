@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 1000vh;
+}
+
+/* Apply scroll snap to html */
+html {
+    scroll-snap-type: y mandatory; 
+}
+
+/* Flexbox styling for body to center content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    overflow-y: scroll;
+    margin: 0;
+    overflow-x: hidden;
+}
+#fullscreenButton {
+    position: absolute;
+    z-index: 100;
+}
+#header {
+    position: absolute;
+}
+#grid-image {
+    height: 100%;
+    z-index: 2;
+}
+.image {
+    width: 25vw;
+    z-index: 2;
+}
+#background {
+    background-color: rgb(158, 164, 171);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+#background-2 {
+    background-color: rgb(158, 164, 171);
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+/* Input video settings */
+#inputVideo {
+    display: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Canvas settings */
+#drawCanvas {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleX(-1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+
+}
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+    margin: 0 auto;
+}
+.h1, .h2 {
+    text-align: center;
+    display: inline;
+    font-size: 3rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+.h2 {
+    color: rgb(143, 255, 78);
+    z-index: 2;
+}
+#large {
+    font-size: 5rem;
+    font-weight: 200;
+    z-index: -20;
+}
+.highlighted {
+    color: rgb(143, 255, 78);
+}
+#highlightButton {
+    text-align: center;
+    display: inline;
+    font-size: 3rem;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+#highlightButton:hover {
+    font-weight: 700;
+}
+#tree {
+    width: 100%;
+    z-index: 2;
+}
+
+/* Full-screen containers with scroll snap behavior */
+#text-container-0, #text-container-1, #text-container-2, #text-container-3, #text-container-4, #text-container-5,#text-container-6, #text-container-7, #text-container-8, #text-container-9 {
+    width: 80vw;          
+    height: 100vh;      
+    scroll-snap-align: center; 
+    display: flex;   
+    flex-direction: column;      
+    justify-content: center;    
+    align-items: center;         
+    text-align: center;      
+    margin: 0;
+    padding: 0;    
+    overflow: hidden;
+}
+#text-container-0, #text-container-1, #text-container-6, #text-container-7 {
+    z-index: 10;
+}
+#text-container-9 {
+    width: 100vw;
+}
+
+
+
+/* Toggle shape styling */
+#toggleShape {
+    z-index: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
